@@ -34,5 +34,6 @@ def stackcalculator(list):
         print("Финальный ответ:")
         return stack
 
-
-print(stackcalculator([1, 2, 3, 4, '+', '*']))
+a=input("input: ").split()
+a = [int(x) if x.isdigit() or x[0]=='-' and x[1:].isdigit() else x for x in a]
+print(stackcalculator(a))
