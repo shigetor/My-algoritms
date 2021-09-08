@@ -1,28 +1,3 @@
-"""Не считает(("""
-#       def podshet(stack)
-#         if (x == '+'):
-#             a2 = s[0]
-#             a1 = s[1]
-#             stack.append(int(a2)+int(a1))
-#         elif (x == '-'):
-#             a2 = s[0]
-#             a1 = s[1]
-#            stack.append(int(a2)*int(a1))
-#         elif (x == '*'):
-#             a2 = s[0]
-#             a1 = s[1]
-#             stack.append(int(a2)*int(a1))
-#         elif (x == '/'):
-#             a2 = s[0]
-#             a1 = s[1]
-#            stack.append(int(a2/int(a1))
-#         else:
-#             stack.append(list+stack)
-#     return stack[0]
-#
-#
-
-
 """Калькулятор через стек
 Input: На вход поступает список из чисел и алгебраических знаков,
 создается список(стек), если в списке содержатся числа то они заносятся стек, если на вход попадает любой знак
