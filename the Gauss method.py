@@ -6,7 +6,7 @@ myB = map(float, input("Введите матрицу правых частей,
 myB = list(myB)
 
 
-def FancyPrint(A, B, selected):
+def showmatrix(A, B, selected):
     for row in range(len(B)):
         print("(", end='')
         for col in range(len(A[row])):
@@ -32,9 +32,9 @@ def CombineRows(A, B, row, source_row, weight):
 
 def Gauss(A, B):
     column = 0
-    while (column < len(B)):
+    while column < len(B):
 
-        print("Ищем максимальный по модулю элемент в {0}-м столбце:".format(column + 1))
+        print(format(column + 1))
         current_row = None
         for r in range(column, len(A)):
             if current_row is None or abs(A[r][column]) > abs(A[current_row][column]):
@@ -42,25 +42,25 @@ def Gauss(A, B):
         if current_row is None:
             print("решений нет")
             return None
-        FancyPrint(A, B, (current_row, column))
+        showmatrix(A, B, (current_row, column))
 
         if current_row != column:
-            print("Переставляем строку с найденным элементом повыше:")
+            print()
             SwapRows(A, B, current_row, column)
-            FancyPrint(A, B, (column, column))
+            showmatrix(A, B, (column, column))
 
-        print("Нормализуем строку с найденным элементом:")
+        print()
         DivideRow(A, B, column, A[column][column])
-        FancyPrint(A, B, (column, column))
+        showmatrix(A, B, (column, column))
 
-        print("Обрабатываем нижележащие строки:")
+        print()
         for r in range(column + 1, len(A)):
             CombineRows(A, B, r, column, -A[r][column])
-        FancyPrint(A, B, (column, column))
+        showmatrix(A, B, (column, column))
 
         column += 1
 
-    print("Матрица приведена к треугольному виду, считаем решение")
+    print()
     X = [0 for b in B]
     for i in range(len(B) - 1, -1, -1):
         X[i] = B[i] - sum(x * a for x, a in zip(X[(i + 1):], A[i][(i + 1):]))
@@ -72,7 +72,7 @@ def Gauss(A, B):
 
 
 print("Исходная система:")
-FancyPrint(myA, myB, None)
+showmatrix(myA, myB, None)
 
 print("Решаем:")
 Gauss(myA, myB)
