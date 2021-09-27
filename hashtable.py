@@ -1,9 +1,3 @@
-phone_book = {}
-phone_book['Jenny'] = 848484
-phone_book['emergency'] = 911
-s=phone_book['emergency']
-print(type(s))
-print(phone_book)
 shop={}
 shop['apple']=2
 a=shop['apple']-1
@@ -16,4 +10,6 @@ def sell(list):
     return shop
 a=input("че надо").split()
 print(sell(a))
+
+
 
