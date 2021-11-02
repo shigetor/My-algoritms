@@ -33,3 +33,8 @@ def Gauss():
 
 a = Gauss()
 print(a)
+import time
+startTime = time.time()
+
+endTime = time.time()
+totalTime = endTime - startTime

@@ -3,6 +3,8 @@ Input: На вход поступает список из чисел и алге
 создается список(стек), если в списке содержатся числа то они заносятся стек, если на вход попадает любой знак
 берем два последние числа из стека до этого знака и кладем их результат их операции.
 Output:Резульат вычислений и прможетучное резульататы"""
+import numpy
+import random
 
 
 def stackcalculator(list):
@@ -38,10 +40,14 @@ def stackcalculator(list):
             print("Вы ввели неккоретное число")
 
 
-name = list()
-new_list = []
+#
+# name = list()
+# new_list = []
+#
+# a = input(f'input значение(числа,либо + - * / ').split()
+# a = [int(x) if x.isdigit() or x[0] == '-' and x[1:].isdigit() else x for x in a]
+#
+# print(stackcalculator(a))
 
-a = input(f'input значение(числа,либо + - * / ').split()
-a = [int(x) if x.isdigit() or x[0] == '-' and x[1:].isdigit() else x for x in a]
-
-print(stackcalculator(a))
+a = random.sample(range(1000), 1000)
+print(a)
