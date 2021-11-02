@@ -49,5 +49,3 @@ def stackcalculator(list):
 #
 # print(stackcalculator(a))
 
-a = random.sample(range(1000), 1000)
-print(a)

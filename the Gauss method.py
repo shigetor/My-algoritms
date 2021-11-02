@@ -31,10 +31,3 @@ def Gauss():
         print(f'x{i + 1} = {newArr1[i]}\t')
 
 
-a = Gauss()
-print(a)
-import time
-startTime = time.time()
-
-endTime = time.time()
-totalTime = endTime - startTime
